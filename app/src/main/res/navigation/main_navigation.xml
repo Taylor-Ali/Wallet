@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/welcomeFragment">
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.leaf.wallet.ui.welcome.WelcomeFragment"
+        android:label="@string/welcome_title"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_setupFragment"
+            app:destination="@id/setupFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/setupFragment"
+        android:name="com.leaf.wallet.ui.setup.SetupFragment"
+        android:label="@string/setup_title"
+        tools:layout="@layout/fragment_setup" >
+        <action
+            android:id="@+id/action_setupFragment_to_walletFragment"
+            app:destination="@id/walletFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/walletFragment"
+        android:name="com.leaf.wallet.ui.wallet.WalletFragment"
+        android:label="@string/wallet_screen_title"
+        tools:layout="@layout/fragment_wallet" >
+        <action
+            android:id="@+id/action_walletFragment_to_fluctuationsFragment"
+            app:destination="@id/fluctuationsFragment" />
+        <action
+            android:id="@+id/action_walletFragment_to_setupFragment"
+            app:destination="@id/setupFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fluctuationsFragment"
+        android:name="com.leaf.wallet.ui.fluctuations.FluctuationsFragment"
+        android:label="@string/fluctuations_title"
+        tools:layout="@layout/fragment_fluctuations" >
+        <argument
+            android:name="Rate"
+            app:argType="com.leaf.wallet.ui.wallet.Rate" />
+    </fragment>
+</navigation>

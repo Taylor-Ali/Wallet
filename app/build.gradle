@@ -1,0 +1,104 @@
+plugins {
+    id 'kotlin-kapt'
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'com.google.dagger.hilt.android'
+    id 'androidx.navigation.safeargs'
+}
+
+android {
+    namespace 'com.leaf.wallet'
+    compileSdk versions.sdk.compile
+
+    defaultConfig {
+        applicationId "com.leaf.wallet"
+        minSdk versions.sdk.min
+        targetSdk versions.sdk.target
+        versionCode versions.versionCode()
+        versionName versions.versionName()
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildFeatures {
+        buildConfig = true
+        dataBinding true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+kapt {
+    correctErrorTypes true
+}
+
+dependencies {
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:${versions.tools.kotlin}"
+    implementation "androidx.core:core-ktx:${versions.libraries.coreKtx}"
+
+    //Support
+    implementation "androidx.appcompat:appcompat:${versions.libraries.appCompat}"
+
+    //Design
+    implementation "com.google.android.material:material:${versions.libraries.material}"
+    implementation "androidx.constraintlayout:constraintlayout:${versions.libraries.constraintLayout}"
+    implementation "androidx.recyclerview:recyclerview:${versions.libraries.recyclerview}"
+    implementation "androidx.activity:activity-ktx:${versions.libraries.activity}"
+    implementation "androidx.fragment:fragment-ktx:${versions.libraries.fragment}"
+
+    //Navigation
+    implementation "androidx.navigation:navigation-fragment-ktx:${versions.libraries.navigation}"
+    implementation "androidx.navigation:navigation-ui-ktx:${versions.libraries.navigation}"
+    implementation "androidx.navigation:navigation-dynamic-features-fragment:${versions.libraries.navigation}"
+
+    //Lifecycle
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:${versions.libraries.lifecycle}"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:${versions.libraries.lifecycle}"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:${versions.libraries.lifecycle}"
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+
+    //Dagger Hilt
+    implementation 'com.google.dagger:hilt-android:2.49'
+    kapt 'com.google.dagger:hilt-compiler:2.49'
+
+
+    //Retrofit
+    implementation "com.squareup.retrofit2:retrofit:${versions.libraries.retrofit}"
+    implementation "com.squareup.retrofit2:converter-gson:${versions.libraries.retrofit}"
+    //OKHttp
+    implementation "com.squareup.okhttp3:okhttp:${versions.libraries.okhttp}"
+    implementation "com.squareup.okhttp3:logging-interceptor:${versions.libraries.okHttpInterceptor}"
+
+    //Corutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:${versions.libraries.coroutines}"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:${versions.libraries.coroutines}"
+
+    //Room
+    implementation "androidx.room:room-runtime:${versions.libraries.room}"
+    implementation "androidx.room:room-ktx:${versions.libraries.room}"
+    kapt "androidx.room:room-compiler:${versions.libraries.room}"
+
+    //Logging
+    implementation "com.jakewharton.timber:timber:${versions.libraries.timber}"
+
+
+    //Testing
+    testImplementation "junit:junit:${versions.libraries.junit}"
+    testImplementation "org.mockito:mockito-inline:${versions.libraries.mockito}"
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:${versions.libraries.coroutines}"
+    androidTestImplementation "androidx.test.ext:junit:${versions.libraries.extJunit}"
+    androidTestImplementation "androidx.test.espresso:espresso-core:${versions.libraries.espresso}"
+}

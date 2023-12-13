@@ -1,0 +1,53 @@
+ext.versions = [
+
+        app        : "0.0.1",
+
+        sdk        : [
+
+                min    : 24,
+                compile: 34,
+                target : 34
+        ],
+
+        tools      : [
+
+                gradle             : '8.0',
+                kotlin             : "1.8.0",
+                navigation         : "2.4.1",
+        ],
+
+        libraries  : [
+
+                coreKtx          : "1.10.1",
+                coreKtxBom       : "1.8.0",
+                splash           : "1.0.1",
+                navigation       : "2.7.0",
+                lifecycle        : "2.6.1",
+                compose          : "1.7.2",
+                composebom       : "2022.10.00",
+                material         : "material3",
+                viewPagerVersion : "1.0.0",
+                dagger           : "2.41",
+                hilt             : "2.47",
+                okHttp           : "4.8.1",
+                okHttpInterceptor: "4.8.1",
+                timber           : "4.7.1",
+                retrofit         : "2.9.0",
+                coroutines       : "1.7.1",
+                room             : "2.4.2",
+                roomCoroutines   : "1.6.0",
+                mockito          : "3.6.28",
+                junit            : "4.13.2",
+                extJunit         : "1.1.5",
+                espresso         : "3.5.1",
+        ],
+
+        versionName: {
+            return ext.versions.app
+        },
+
+        versionCode: {
+            def (major, minor, patch) = ext.versions.app.tokenize('.')
+            return (major.toInteger() * 10000) + (minor.toInteger() * 100) + patch.toInteger()
+        }
+]

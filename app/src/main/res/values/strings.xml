@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Wallet</string>
+    <string name="welcome_title">Welcome</string>
+    <string name="welcome_copy">Bitcoin wallet manage your bitcoins by displaying real time currency information.</string>
+    <string name="setup_title">Add Bitcoins To Wallet.</string>
+    <string name="setup_copy">Please enter the amount of Bitcoins you currently own.</string>
+    <string name="wallet_screen_title">Bitcoin Wallet</string>
+    <string name="currency_btc">BTC</string>
+    <string name="fluctuations_instruction_result_copy">For Current Date Ranges the fluctuations is as follows.</string>
+    <string name="fluctuations_current_value_list_item_title">Current Value</string>
+    <string name="fluctuations_previous_value_list_item_title">Previous Value</string>
+    <string name="fluctuations_percentage_list_item_title">Fluctuation Percentage</string>
+    <string name="text_field_hint_bitcoin">Bitcoins I currently own.</string>
+    <string name="text_field_hint_start_date">Start Date</string>
+    <string name="text_field_hint_end_date">End Date</string>
+    <string name="button_label_confirm">Confirm</string>
+    <string name="button_label_continue">Continue</string>
+    <string name="button_label_retry">Retry</string>
+    <string name="destination_welcome">welcome</string>
+    <string name="destination_setup">setup</string>
+    <string name="destination_wallet">wallet</string>
+    <string name="add_bitcoin">add bitcoin</string>
+    <string name="fluctuations_title">Fluctuations</string>
+    <string name="error_invalid_bitcoin_supplied">Invalid Bitcoin supplied.Please try again.</string>
+    <string name="message_loading">Loading...</string>
+    <string name="message_error">We unable to complete your request.Please try again later.</string>
+    <string name="start_date">Start Date:</string>
+    <string name="end_date">End Date:</string>
+    <string name="start_rate">Start Rate:</string>
+    <string name="end_rate">End Rate:</string>
+    <string name="bitcoin_symbol">\u20BF</string>
+    <string name="bitcoin_rate">\u20BF 1 = </string>
+    <string name="change_value">Change Value:</string>
+    <string name="change_percentage_value">Change Percentage Value:</string>
+</resources>

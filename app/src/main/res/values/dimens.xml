@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_default">16dp</dimen>
+    <dimen name="half_default_margin">8dp</dimen>
+    <dimen name="padding_default">16dp</dimen>
+    <dimen name="half_default_padding">8dp</dimen>
+
+    <dimen name="text_size_small">16sp</dimen>
+
+    <dimen name="text_size_list_item_1">16sp</dimen>
+    <dimen name="text_size_list_item_2">18sp</dimen>
+    <dimen name="text_size_rate">36sp</dimen>
+    <dimen name="text_size_medium">24sp</dimen>
+
+    <dimen name="text_size_large">48sp</dimen>
+    <dimen name="card_elevation">2dp</dimen>
+    <dimen name="image_width">250dp</dimen>
+    <dimen name="image_height">250dp</dimen>
+
+    <dimen name="thumbnail">40dp</dimen>
+    <dimen name="row_padding">10dp</dimen>
+</resources>
